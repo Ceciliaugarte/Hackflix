@@ -1,0 +1,134 @@
+/* NAVBAR */
+.navbar-container {
+  background: url("https://images.squarespace-cdn.com/content/v1/57e05e534402434aa0f846c2/1483209155367-9QEHWBL0UPEFM0KNTNV1/JFHpU0id.jpeg?format=1000w")
+    no-repeat center;
+  background-size: cover;
+  min-height: 80vh;
+  filter: brightness(80%);
+  position: relative;
+}
+
+.navbar-container::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+
+nav {
+  z-index: 1;
+}
+
+.navbar-container nav {
+  background-color: transparent !important;
+}
+
+.hackflix {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: monospace Impact, Haettenschweiler, "Arial Narrow Bold",
+    sans-serif;
+  color: rgb(170, 0, 0);
+  font-weight: 900;
+}
+
+.nav-link {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: 600;
+}
+
+/* MOVIES */
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.movie img:hover {
+  transform: scale(1.1);
+}
+
+/* MOVIE DETAILS */
+
+.movieDetail img {
+  width: 50%;
+  height: 70%;
+}
+
+/* ABOUT US - CONTACT */
+
+.about-us .contact {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* PAGES */
+
+.pages {
+  left: 50%;
+  transform: rotateX(-50%);
+}
+
+/* FOOTER */
+
+footer {
+  background-color: black;
+  padding: 60px 0px;
+  position: relative;
+  border-top: rgb(37, 37, 37) solid 0.5px;
+  margin-top: 5%;
+}
+
+footer .row {
+  padding-bottom: 3%;
+}
+
+.subtitle {
+  color: white;
+  justify-content: center;
+  text-align: center;
+}
+
+.items {
+  color: rgb(70, 70, 70);
+  justify-content: center;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 2px;
+}
+
+.icons svg {
+  transform: rotateX("-50%");
+  margin: 5px;
+}
+
+ul,
+li {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 3px;
+}
+
+.Copyright {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  justify-content: space-between;
+  color: gray;
+}
+
+.Privacy {
+  color: gray;
+  text-decoration: none;
+}
