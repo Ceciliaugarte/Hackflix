@@ -42,35 +42,35 @@ function MovieDetails(props) {
       <div className="container">
         <div className="row justify-content-center movieDetail">
           <div className="col-6 justify-content-center g-3">
-            <h1 className="text-center mb-3">{movie.title} </h1>
+            <h1 className="text-center mb-3 general-text">{movie.title} </h1>
             <div className="text-center mb-3">
               {movie.poster_path ? (
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                  alt="img"
+                  alt="Movie-poster"
                 />
               ) : (
                 <img
-                  src={"../../public/ffffff.jpg&text=Image+Not+Found"}
-                  alt="img"
+                  src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg"
+                  alt="Movie-poster"
                 />
               )}
             </div>
-            <p className="mb-3">
+            <p className="mb-3 general-text">
               <span className="fw-semibold fs-5">Fecha de publicación: </span>
               {movie.release_date}
             </p>
-            <p className="mb-3">
+            <p className="mb-3 general-text">
               <span className="fw-semibold fs-5">Resumen: </span>{" "}
               {movie.overview}
             </p>
-            <p className="mb-3">
+            <p className="mb-3 general-text">
               <span className="fw-semibold fs-5">Rating: </span>{" "}
               {movie.vote_average}
             </p>
           </div>
           <div className="d-flex justify-content-center my-4 d-grid">
-            <NavLink className="btn btn-primary text-center" to="/">
+            <NavLink className="btn text-center back-home" to="/">
               Volver a Home
             </NavLink>
           </div>

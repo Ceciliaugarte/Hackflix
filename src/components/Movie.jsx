@@ -12,10 +12,13 @@ function Movie({ movie }) {
         {movie.poster_path ? (
           <img
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-            alt="img"
+            alt="Movie-poster"
           />
         ) : (
-          <img src={"../../public/ffffff.jpg&text=Image+Not+Found"} alt="img" />
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg"
+            alt="Movie-poster"
+          />
         )}
       </button>
       <p className="text-center p-3 text-white">{movie.title}</p>

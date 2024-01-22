@@ -1,25 +1,47 @@
 import "../App.css";
 import { NavLink } from "react-router-dom";
+import { Navbar as BootstrapNavbar, Nav, Container } from "react-bootstrap";
+import { useState } from "react";
 
 function Navbar() {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleNavbarToggle = () => {
+    setExpanded(!expanded);
+  };
+
+  const closeNavbar = () => {
+    setExpanded(false);
+  };
+
   return (
     <div className="navbar-container">
-      <nav className="nav-box py-2">
-        <div className="container">
-          <div className="d-flex justify-content-between align-items-center">
-            <div className="justify-content-center">
-              <NavLink
-                to="/"
-                className="d-flex align-items-center mb-3 mb-lg-0 me-lg-auto link-body-emphasis text-decoration-none"
-              >
-                <span className="hackflix fs-1">HACKFLIX</span>
-              </NavLink>
-            </div>
-            <ul className="nav justify-content-end align-items-center py-2">
-              <li className="nav-item">
+      <BootstrapNavbar
+        expand="lg"
+        className="nav-box py-2 px-5 navbar-light"
+        expanded={expanded}
+      >
+        <Container>
+          <NavLink
+            to="/"
+            className="navbar-brand link-body-emphasis text-decoration-none"
+          >
+            <span className="hackflix fs-1">HACKFLIX</span>
+          </NavLink>
+
+          <BootstrapNavbar.Toggle
+            aria-controls="navbarNav"
+            className="bg-light"
+            onClick={handleNavbarToggle}
+          />
+
+          <BootstrapNavbar.Collapse id="navbarNav">
+            <Nav className="ms-auto my-3 align-items-start">
+              <Nav.Item>
                 <NavLink
-                  className="nav-link rounded-pill border border-light-subtle text-bold text-light"
+                  className="nav-link search-item rounded-pill border border-light-subtle text-bold text-light px-3"
                   to="/search"
+                  onClick={closeNavbar}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -33,21 +55,31 @@ function Navbar() {
                   </svg>
                   Search movie
                 </NavLink>
-              </li>
-              <li className="nav-link ps-4">
-                <NavLink className="nav-link py-0" to="/about-us">
+              </Nav.Item>
+
+              <Nav.Item className="nav-link ps-2">
+                <NavLink
+                  className="nav-link py-0"
+                  to="/about-us"
+                  onClick={closeNavbar}
+                >
                   About Us
                 </NavLink>
-              </li>
-              <li className="nav-link ps-2">
-                <NavLink className="nav-link  py-0" to="/contact">
+              </Nav.Item>
+
+              <Nav.Item className="nav-link ps-2">
+                <NavLink
+                  className="nav-link py-0"
+                  to="/contact"
+                  onClick={closeNavbar}
+                >
                   Contact
                 </NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+              </Nav.Item>
+            </Nav>
+          </BootstrapNavbar.Collapse>
+        </Container>
+      </BootstrapNavbar>
     </div>
   );
 }

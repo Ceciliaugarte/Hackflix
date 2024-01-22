@@ -40,7 +40,7 @@ function Search() {
               <div className="mb-3 text-center">
                 <label
                   htmlFor="searchMovie"
-                  className="form-label fw-bold fs-3 py-5"
+                  className="form-label fw-bold fs-3 py-5 general-text"
                 >
                   Search Movie
                 </label>
