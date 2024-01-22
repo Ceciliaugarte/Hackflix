@@ -6,7 +6,7 @@ function Movie({ movie }) {
   return (
     <div className="col-12 col-sm-6 col-md-4 col-lg-3 g-4" key={movie.id}>
       <button
-        className="border-0 bg-transparent "
+        className="border-0 bg-transparent"
         onClick={() => navigate(`/movie/${movie.id}`)}
       >
         {movie.poster_path ? (
@@ -18,7 +18,7 @@ function Movie({ movie }) {
           <img src={"../../public/ffffff.jpg&text=Image+Not+Found"} alt="img" />
         )}
       </button>
-      <p className="text-center">Rating: {movie.vote_average}</p>
+      <p className="text-center p-3 text-white">{movie.title}</p>
     </div>
   );
 }

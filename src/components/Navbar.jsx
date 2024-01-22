@@ -1,7 +1,7 @@
 import "../App.css";
 import { NavLink } from "react-router-dom";
 
-function Navbar(props) {
+function Navbar() {
   return (
     <div className="navbar-container">
       <nav className="py-2">

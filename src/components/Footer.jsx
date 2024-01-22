@@ -1,19 +1,19 @@
-import { Nav, NavLink } from "react-bootstrap";
+import { NavLink } from "react-bootstrap";
 
-function Footer(props) {
+function Footer() {
   return (
     <footer>
       <div className="container">
-        <div className=" row justify-content-between">
-          <div className="col-12 col-lg-3 ">
-            <div>
+        <div className="row d-flex justify-content-between">
+          <div className="col-12 col-lg-3">
+            <div className="column-box">
               <h6 className="subtitle">HACKFLIX</h6>
               <div className="icons">
                 <NavLink to="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="18"
+                    height="18"
                     fill="currentColor"
                     class="bi bi-twitter"
                     viewBox="0 0 16 16"
@@ -24,8 +24,8 @@ function Footer(props) {
                 <NavLink to="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="18"
+                    height="18"
                     fill="currentColor"
                     class="bi bi-facebook"
                     viewBox="0 0 16 16"
@@ -36,8 +36,8 @@ function Footer(props) {
                 <NavLink to="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="18"
+                    height="18"
                     fill="currentColor"
                     class="bi bi-instagram"
                     viewBox="0 0 16 16"
@@ -48,8 +48,8 @@ function Footer(props) {
                 <NavLink to="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="18"
+                    height="18"
                     fill="currentColor"
                     class="bi bi-github"
                     viewBox="0 0 16 16"
@@ -60,20 +60,17 @@ function Footer(props) {
               </div>
             </div>
           </div>
-
-          <div className="col-12 col-lg-4">
-            <div>
+          <div className="col-12 col-lg-3 ">
+            <div className="column-box">
               <h6 className="subtitle">Company</h6>
               <ul className="items">
                 <li>About</li>
                 <li>Blog</li>
-
-                <li>Press</li>
               </ul>
             </div>
           </div>
-          <div className="col-12 col-lg-4">
-            <div>
+          <div className="col-12 col-lg-3">
+            <div className="column-box">
               <h6 className="subtitle">Legal</h6>
               <ul className="items">
                 <li>Privacy Policy</li>
@@ -85,12 +82,12 @@ function Footer(props) {
         </div>
         <hr />
         <div className="Copyright">
-          <small>Copyright &copy; Hack Academy</small>
-          <small>
+          <small className="copy-items">Copyright &copy; Hack Academy</small>
+          <small className="copy-items">
             <a className="Privacy" href="#">
               Privacy Policy
-            </a>{" "}
-            &middot;{" "}
+            </a>
+            &middot;
             <a className="Privacy" href="#">
               Terms & Conditions
             </a>

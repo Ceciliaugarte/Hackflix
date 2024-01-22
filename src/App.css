@@ -66,14 +66,10 @@ nav {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* PAGES */
-
 .pages {
   left: 50%;
   transform: rotateX(-50%);
 }
-
-/* FOOTER */
 
 footer {
   background-color: black;
@@ -89,22 +85,19 @@ footer .row {
 
 .subtitle {
   color: white;
-  justify-content: center;
-  text-align: center;
+  font-weight: 700;
 }
 
 .items {
-  color: rgb(70, 70, 70);
-  justify-content: center;
-  text-align: center;
+  color: whitesmoke;
   padding-top: 2px;
+  cursor: pointer;
 }
 
 .icons {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: center;
   padding-top: 2px;
 }
 
@@ -119,16 +112,36 @@ li {
   padding-left: 0;
   padding-top: 3px;
 }
+li:hover {
+  color: rgb(37, 37, 37);
+}
 
 .Copyright {
   display: flex;
   flex-flow: row nowrap;
   position: relative;
   justify-content: space-between;
-  color: gray;
+  color: whitesmoke;
 }
 
 .Privacy {
-  color: gray;
+  color: whitesmoke;
   text-decoration: none;
+}
+
+.Privacy:hover {
+  color: rgb(37, 37, 37);
+}
+
+@media (max-width: 768px) {
+  .Copyright {
+    display: flex;
+    flex-direction: column;
+  }
+  .copy-items {
+    margin-bottom: 5%;
+  }
+  .column-box {
+    margin: 2% 3%;
+  }
 }

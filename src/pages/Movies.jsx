@@ -59,7 +59,7 @@ function Movies(props) {
     <div className="container">
       <div>
         <p className="text-center mt-2 pt-3 fs-4 fw-semibold mb-0">
-          Filtrar por Rating & Mas
+          Filtrar por Rating
         </p>
         <div className="d-flex justify-content-center">
           <ReactStars
