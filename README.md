@@ -1,1 +1,1 @@
-
+Hackflix is a web application built with React JS, leveraging React Bootstrap for a modern and appealing user interface. It incorporates React Router for seamless navigation across different sections of the application. Movie information is fetched from The Movie Database (TMDb) API via AJAX requests, providing up-to-date and detailed data on a wide range of films. This application offers a Netflix-like experience, allowing users to effortlessly explore, search, and discover new movies, all made possible by the integration of cutting-edge web development technologies.
