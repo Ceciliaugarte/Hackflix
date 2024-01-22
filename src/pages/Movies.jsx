@@ -3,11 +3,10 @@ import ReactStars from "react-rating-stars-component";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Movie from "../components/Movie";
-import { NavLink } from "react-router-dom";
 import Pages from "../components/Pages";
 
 let totalPages;
-function Movies(props) {
+function Movies() {
   const [rating, setRating] = useState(5);
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
@@ -58,7 +57,7 @@ function Movies(props) {
   return (
     <div className="container">
       <div>
-        <p className="text-center mt-2 pt-3 fs-4 fw-semibold mb-0">
+        <p className="text-center mt-3 pt-3 fs-2 fw-semibold mb-2 text-white">
           Filtrar por Rating
         </p>
         <div className="d-flex justify-content-center">

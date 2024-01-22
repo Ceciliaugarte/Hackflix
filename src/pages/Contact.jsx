@@ -1,4 +1,4 @@
-function Contact(props) {
+function Contact() {
   return (
     <div className="container my-5">
       <div className="row mx-5 ">

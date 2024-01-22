@@ -1,4 +1,4 @@
-function AboutUs(props) {
+function AboutUs() {
   return (
     <div className="container my-5">
       <div className="row mx-5 my-4 g-4">

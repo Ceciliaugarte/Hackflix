@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import axios, { Axios } from "axios";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -56,15 +56,15 @@ function MovieDetails(props) {
                 />
               )}
             </div>
-            <p className=" mb-3">
+            <p className="mb-3">
               <span className="fw-semibold fs-5">Fecha de publicación: </span>
               {movie.release_date}
             </p>
-            <p className=" mb-3">
+            <p className="mb-3">
               <span className="fw-semibold fs-5">Resumen: </span>{" "}
               {movie.overview}
             </p>
-            <p className=" mb-3">
+            <p className="mb-3">
               <span className="fw-semibold fs-5">Rating: </span>{" "}
               {movie.vote_average}
             </p>

@@ -1,10 +1,8 @@
-/* NAVBAR */
 .navbar-container {
-  background: url("https://images.squarespace-cdn.com/content/v1/57e05e534402434aa0f846c2/1483209155367-9QEHWBL0UPEFM0KNTNV1/JFHpU0id.jpeg?format=1000w")
+  background: url("https://naanmedia.in/wp-content/uploads/2022/10/3658600.jpg")
     no-repeat center;
   background-size: cover;
   min-height: 80vh;
-  filter: brightness(80%);
   position: relative;
 }
 
@@ -18,12 +16,8 @@
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 }
 
-nav {
-  z-index: 1;
-}
-
-.navbar-container nav {
-  background-color: transparent !important;
+.nav-box {
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .hackflix {
@@ -34,13 +28,20 @@ nav {
   font-weight: 900;
 }
 
+nav {
+  z-index: 1;
+}
+
 .nav-link {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: white;
   font-weight: 600;
 }
 
-/* MOVIES */
+.nav-link:hover {
+  color: rgb(170, 0, 0);
+  text-decoration: none;
+}
 
 .movie img {
   width: 100%;
@@ -53,14 +54,10 @@ nav {
   transform: scale(1.1);
 }
 
-/* MOVIE DETAILS */
-
 .movieDetail img {
   width: 50%;
   height: 70%;
 }
-
-/* ABOUT US - CONTACT */
 
 .about-us .contact {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -113,7 +110,7 @@ li {
   padding-top: 3px;
 }
 li:hover {
-  color: rgb(37, 37, 37);
+  color: rgb(170, 0, 0);
 }
 
 .Copyright {
@@ -130,7 +127,7 @@ li:hover {
 }
 
 .Privacy:hover {
-  color: rgb(37, 37, 37);
+  color: rgb(170, 0, 0);
 }
 
 @media (max-width: 768px) {

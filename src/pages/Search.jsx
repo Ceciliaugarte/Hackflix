@@ -4,7 +4,7 @@ import axios from "axios";
 import useInput from "../components/UseInput";
 
 let totalPages;
-function Search(props) {
+function Search() {
   const [filteredMovies, setFilteredMovies] = useState([]);
   const inputTitle = useInput("");
 
