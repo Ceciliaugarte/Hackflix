@@ -1,6 +1,9 @@
 import { NavLink } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function Footer() {
+  const navigate = useNavigate();
+
   return (
     <footer>
       <div className="container">
@@ -64,8 +67,8 @@ function Footer() {
             <div className="column-box">
               <h6 className="subtitle">Company</h6>
               <ul className="items">
-                <li>About</li>
-                <li>Blog</li>
+                <li onClick={() => navigate("/about-us")}>About us</li>
+                <li onClick={() => navigate("/contact")}>Contact</li>
               </ul>
             </div>
           </div>
