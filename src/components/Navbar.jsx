@@ -63,7 +63,7 @@ function Navbar() {
                   to="/about-us"
                   onClick={closeNavbar}
                 >
-                  About Us
+                  About us
                 </NavLink>
               </Nav.Item>
 

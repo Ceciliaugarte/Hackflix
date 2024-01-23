@@ -3,20 +3,19 @@ import { NavLink } from "react-router-dom";
 function Contact() {
   return (
     <div className="container my-5">
-      <div className="row mx-5 ">
-        <div className="col">
+      <div className="row mx-5 my-5">
+        <div className="col border rounded p-5">
           <h1 className="text-center general-text mb-4 contact fw-bold ">
             Contact:
           </h1>
-          <p className="general-text">
-            <span className="fw-bold general-text">Phone: </span> +4938 29483737
-            289320
+          <p className="general-text fs-5">
+            This proyect was created by <strong>Cecilia Ugartemendia </strong>
           </p>
-          <p className="general-text">
+          <p className="general-text fs-5">
             <span className="fw-bold">Direction: </span> Distinctio adipisci
             4566, Lorem ipsum.
           </p>
-          <p className="general-text">
+          <p className="general-text fs-5">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
             iure vitae harum veritatis? Distinctio adipisci, sequi mollitia
             minima voluptate ipsa? Soluta ut ad ea nemo delectus dicta
