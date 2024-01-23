@@ -105,7 +105,9 @@ function Footer() {
         </div>
         <hr />
         <div className="Copyright">
-          <small className="copy-items">Copyright &copy; Hack Academy</small>
+          <small className="copy-items">
+            &copy; Hack Academy &middot; Cecilia Ugartemendía
+          </small>
           <small className="copy-items">
             <span className="Privacy" onClick={() => setModalShow(true)}>
               Privacy Policy

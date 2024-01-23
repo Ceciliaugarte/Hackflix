@@ -36,10 +36,10 @@ function Navbar() {
           />
 
           <BootstrapNavbar.Collapse id="navbarNav">
-            <Nav className="ms-auto my-3 align-items-start">
-              <Nav.Item>
+            <Nav className="ms-auto mt-3 ">
+              <Nav.Item className="mb-2 mt-2">
                 <NavLink
-                  className="nav-link search-item rounded-pill border border-light-subtle text-bold text-light px-3"
+                  className="search-item rounded-pill border border-light-subtle text-bold text-light px-3 align-middle"
                   to="/search"
                   onClick={closeNavbar}
                 >
@@ -48,16 +48,16 @@ function Navbar() {
                     width="16"
                     height="16"
                     fill="currentColor"
-                    className="bi bi-search me-2"
+                    className="bi bi-search me-2 mb-1"
                     viewBox="0 0 16 16"
                   >
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                  </svg>
-                  Search movie
+                  </svg>{" "}
+                  <span className="search">Search movie</span>
                 </NavLink>
               </Nav.Item>
 
-              <Nav.Item className="nav-link ps-2">
+              <Nav.Item className="nav-link ps-2 mb-2">
                 <NavLink
                   className="nav-link py-0"
                   to="/about-us"
@@ -67,7 +67,7 @@ function Navbar() {
                 </NavLink>
               </Nav.Item>
 
-              <Nav.Item className="nav-link ps-2">
+              <Nav.Item className="nav-link ps-2 mb-2">
                 <NavLink
                   className="nav-link py-0"
                   to="/contact"

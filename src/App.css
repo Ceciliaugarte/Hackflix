@@ -44,11 +44,32 @@ nav {
 .nav-link:hover {
   color: rgb(170, 0, 0) !important;
   text-decoration: none !important;
+  font-weight: 600;
+}
+
+.search-item {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8% 10%;
+  transition: transform 0.2s color 0.2s ease;
+  line-height: 1.5;
+}
+
+.search {
+  display: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .search-item:hover {
-  color: rgb(170, 0, 0) !important;
-  border: solid 2px rgb(170, 0, 0) !important;
+  transform: scale(1.05);
+}
+
+.search-item:hover .search {
+  display: inline;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .movie img {

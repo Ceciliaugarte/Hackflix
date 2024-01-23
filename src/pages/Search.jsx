@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Movie from "../components/Movie";
 import axios from "axios";
 import useInput from "../components/UseInput";
+import { NavLink } from "react-router-dom";
 
 let totalPages;
 function Search() {
@@ -72,6 +73,13 @@ function Search() {
               />
             ))
           )}
+        </div>
+        <div className="d-flex justify-content-center my-4 d-grid">
+          <NavLink className="btn text-center back-home" to="/">
+            {" "}
+            <i className="bi bi-arrow-left me-2"></i>
+            Back home
+          </NavLink>
         </div>
       </div>
     )
