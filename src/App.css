@@ -126,6 +126,15 @@ footer .row {
   margin: 5px;
 }
 
+.icon {
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.icon:hover {
+  color: rgb(170, 0, 0);
+}
+
 ul,
 li {
   list-style: none;
@@ -135,6 +144,22 @@ li {
 
 li:hover {
   color: rgb(170, 0, 0);
+}
+
+.close-modal-btn {
+  border: 3px solid black;
+  border-radius: 10%;
+  background-color: white;
+  padding: 8px 18px;
+  font-weight: 700;
+  font-size: medium;
+  margin-right: 4%;
+}
+
+.close-modal-btn:hover {
+  color: rgb(170, 0, 0);
+  font-weight: 700;
+  border: 3px solid rgb(170, 0, 0);
 }
 
 .Copyright {
@@ -147,7 +172,7 @@ li:hover {
 
 .Privacy {
   color: whitesmoke;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .Privacy:hover {

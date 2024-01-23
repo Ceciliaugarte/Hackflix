@@ -35,14 +35,19 @@ function MovieDetails(props) {
     );
   } else {
     return !movie ? (
-      <div className="spinner-border text-secondary" role="status">
+      <div
+        className="spinner-border text-secondary justify-content-center"
+        role="status"
+      >
         <span className="visually-hidden">Loading...</span>
       </div>
     ) : (
       <div className="container">
         <div className="row justify-content-center movieDetail">
           <div className="col-6 justify-content-center g-3">
-            <h1 className="text-center mb-3 general-text">{movie.title} </h1>
+            <h1 className="text-center mb-3 mt-5 general-text">
+              {movie.title}{" "}
+            </h1>
             <div className="text-center mb-3">
               {movie.poster_path ? (
                 <img
@@ -71,7 +76,8 @@ function MovieDetails(props) {
           </div>
           <div className="d-flex justify-content-center my-4 d-grid">
             <NavLink className="btn text-center back-home" to="/">
-              Volver a Home
+              <i className="bi bi-arrow-left me-2"></i>
+              Back home
             </NavLink>
           </div>
         </div>

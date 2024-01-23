@@ -3,11 +3,18 @@ import { useNavigate } from "react-router-dom";
 function Movie({ movie }) {
   const navigate = useNavigate();
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="col-12 col-sm-6 col-md-4 col-lg-3 g-4" key={movie.id}>
       <button
         className="border-0 bg-transparent"
-        onClick={() => navigate(`/movie/${movie.id}`)}
+        onClick={() => {
+          navigate(`/movie/${movie.id}`);
+          scrollToTop();
+        }}
       >
         {movie.poster_path ? (
           <img

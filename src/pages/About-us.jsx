@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function AboutUs() {
   return (
     <div className="container my-5">
@@ -22,6 +24,13 @@ function AboutUs() {
             repellat corporis tempora!
           </p>
         </div>
+      </div>
+      <div className="d-flex justify-content-center my-4 d-grid">
+        <NavLink className="btn text-center back-home" to="/">
+          {" "}
+          <i className="bi bi-arrow-left me-2"></i>
+          Back home
+        </NavLink>
       </div>
     </div>
   );
