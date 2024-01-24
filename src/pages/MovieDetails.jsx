@@ -43,43 +43,50 @@ function MovieDetails(props) {
       </div>
     ) : (
       <div className="container">
-        <div className="row justify-content-center movieDetail">
-          <div className="col-6 justify-content-center g-3">
-            <h1 className="text-center mb-3 mt-5 general-text">
-              {movie.title}{" "}
-            </h1>
-            <div className="text-center mb-3">
+        <div className="movieDetail">
+          <div className="row movie-box mb-3 mt-5">
+            <div className="col-12 col-lg-4 img-box">
               {movie.poster_path ? (
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                   alt="Movie-poster"
+                  className="movie-img"
                 />
               ) : (
                 <img
                   src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg"
                   alt="Movie-poster"
+                  className="movie-img"
                 />
               )}
             </div>
-            <p className="mb-3 general-text">
-              <span className="fw-semibold fs-5">Fecha de publicación: </span>
-              {movie.release_date}
-            </p>
-            <p className="mb-3 general-text">
-              <span className="fw-semibold fs-5">Resumen: </span>{" "}
-              {movie.overview}
-            </p>
-            <p className="mb-3 general-text">
-              <span className="fw-semibold fs-5">Rating: </span>{" "}
-              {movie.vote_average}
-            </p>
+            <div className="col-12 col-lg-8 mb-4 ps-5  info-box">
+              <h1 className="general-text display-3">{movie.title}</h1>
+              <small className="text-secondary d-block">{movie.title}</small>
+              <small className="mb-3 text-secondary">
+                Release on {movie.release_date}
+              </small>
+              <hr />
+              <p className="mt-3 general-text fs-4 fw-semibold">Overview:</p>
+              <p className="mb-4 general-text fs-4">{movie.overview}</p>
+              <p className="mt-3 general-text fs-4 fw-semibold">Popularity</p>
+              <p className="mb-4 general-text fs-4">
+                This movie has been already watched by{" "}
+                <strong>{movie.popularity} people!</strong>
+                {console.log(movie)}
+              </p>
+              <p className="mt-3 general-text fs-4 fw-semibold">Rating: </p>
+              <p className="mb-4 general-text fs-4">
+                {movie.vote_average.toFixed(1)} / 10
+              </p>
+            </div>
           </div>
-          <div className="d-flex justify-content-center my-4 d-grid">
-            <NavLink className="btn text-center back-home" to="/">
-              <i className="bi bi-arrow-left me-2"></i>
-              Back home
-            </NavLink>
-          </div>
+        </div>
+        <div className="d-flex justify-content-center my-4 d-grid">
+          <NavLink className="btn text-center back-home" to="/">
+            <i className="bi bi-arrow-left me-2"></i>
+            Back home
+          </NavLink>
         </div>
       </div>
     );

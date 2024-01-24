@@ -83,9 +83,28 @@ nav {
   transform: scale(1.1);
 }
 
-.movieDetail img {
-  width: 50%;
-  height: 70%;
+.movieDetail {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+.movie-box {
+  width: 100%;
+  padding: 0 5%;
+}
+
+.movie-img {
+  width: 100%;
+  box-shadow: 4px 4px 10px 10px #00000080;
+  margin: 50px 25px;
+}
+
+.img-box {
+  justify-content: center;
+}
+
+.info-box {
+  margin: 30px 0;
 }
 
 .back-home {
@@ -114,7 +133,7 @@ nav {
 }
 
 footer {
-  background-color: black;
+  background-color: rgb(13 13 13);
   padding: 60px 0px;
   position: relative;
   border-top: rgb(37, 37, 37) solid 0.5px;
@@ -201,9 +220,24 @@ li:hover {
   color: rgb(170, 0, 0);
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-box {
+    display: flex;
     flex-direction: column;
+  }
+  .movie-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .Copyright {
     display: flex;

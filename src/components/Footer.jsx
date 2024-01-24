@@ -18,11 +18,14 @@ function Footer() {
             <div className="column-box">
               <h6 className="subtitle">HACKFLIX</h6>
               <div className="icons">
-                <a href="https://www.linkedin.com/in/cecilia-ugartemendia/">
-                  <i class="bi bi-linkedin icon fs-5"></i>
+                <a
+                  href="https://www.linkedin.com/in/cecilia-ugartemendia/"
+                  target="_blank"
+                >
+                  <i className="bi bi-linkedin icon fs-5"></i>
                 </a>
-                <a href="https://github.com/Ceciliaugarte">
-                  <i class="bi bi-github icon fs-5 ms-2"></i>
+                <a href="https://github.com/Ceciliaugarte" target="_blank">
+                  <i className="bi bi-github icon fs-5 ms-2"></i>
                 </a>
               </div>
             </div>

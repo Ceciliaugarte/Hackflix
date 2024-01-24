@@ -18,7 +18,7 @@ function ModalInfo({ modalShow, setModalShow }) {
       <Modal.Body>
         <p className="fs-5 px-2">
           This section is designed for illustrative purposes, intended to
-          replicate the Company's information in a simulated manner.
+          simulate the Company's information.
         </p>
       </Modal.Body>
       <Modal.Footer>
