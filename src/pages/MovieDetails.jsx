@@ -9,6 +9,13 @@ function MovieDetails(props) {
   const [movie, setMovie] = useState(null);
   const [isError, setIsError] = useState(null);
 
+  const convertRunTime = (min) => {
+    let result;
+    const hours = Math.floor(min / 60);
+    const minutes = min % 60;
+    return (result = { hours: hours, minutes: minutes });
+  };
+
   useEffect(() => {
     const getMovie = async () => {
       try {
@@ -35,11 +42,13 @@ function MovieDetails(props) {
     );
   } else {
     return !movie ? (
-      <div
-        className="spinner-border text-secondary justify-content-center"
-        role="status"
-      >
-        <span className="visually-hidden">Loading...</span>
+      <div className="justify-content-center">
+        <div
+          className="spinner-border text-secondary justify-content-center"
+          role="status"
+        >
+          <span className="visually-hidden">Loading...</span>
+        </div>
       </div>
     ) : (
       <div className="container">
@@ -66,6 +75,7 @@ function MovieDetails(props) {
               <small className="mb-3 text-secondary">
                 Release on {movie.release_date}
               </small>
+              <small> &middot; {/* {convertRunTime(movie.runtime)} */}</small>
               <hr />
               <p className="mt-3 general-text fs-4 fw-semibold">Overview:</p>
               <p className="mb-4 general-text fs-4">{movie.overview}</p>
@@ -79,6 +89,14 @@ function MovieDetails(props) {
               <p className="mb-4 general-text fs-4">
                 {movie.vote_average.toFixed(1)} / 10
               </p>
+              <hr />
+              <small className="text-secondary">
+                Produced by{" "}
+                <strong>
+                  {movie.production_companies[0].name} &middot;{" "}
+                  {movie.production_countries[0].name}
+                </strong>
+              </small>
             </div>
           </div>
         </div>
