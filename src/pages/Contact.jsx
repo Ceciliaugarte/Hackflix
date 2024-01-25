@@ -14,17 +14,20 @@ function Contact() {
         }}
       ></header>
       <div className="container my-5">
-        <div className="row mx-5 my-5">
-          <div className="col p-5">
-            <h1 className="text-center general-text mb-4 contact fw-bold ">
-              Contact:
-            </h1>
+        <h1 className="text-center general-text mb-4 contact fw-bold ">
+          Contact:
+        </h1>
+        <div className="row me-1">
+          <div className="col-12 col-lg-4 contact-img-box">
+            <img
+              className="rounded-circle justify-content-center contact-img"
+              src="https://avatars.githubusercontent.com/u/145774575?s=400&u=ba1d982fbd938c0a89a45fee3822d2a843115cc2&v=4"
+              alt="CeciliaImg"
+            />
+          </div>
+          <div className="col-12 col-lg-8 mt-lg-4">
             <p className="general-text fs-5">
               This proyect was created by <strong>Cecilia Ugartemendia </strong>
-            </p>
-            <p className="general-text fs-5">
-              <span className="fw-bold">Direction: </span> Distinctio adipisci
-              4566, Lorem ipsum.
             </p>
             <p className="general-text fs-5">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
@@ -35,9 +38,20 @@ function Contact() {
               voluptates ex maiores consequuntur quidem asperiores ab blanditiis
               nihil, deserunt corporis sunt provident dolores totam non eos?
             </p>
+            <div>
+              <a
+                href="https://www.linkedin.com/in/cecilia-ugartemendia/"
+                target="_blank"
+              >
+                <i className="bi bi-linkedin display-4 icon"></i>
+              </a>
+              <a href="https://github.com/Ceciliaugarte" target="_blank">
+                <i className="bi bi-github display-4 ms-4 icon"></i>
+              </a>
+            </div>
           </div>
         </div>
-        <div className="d-flex justify-content-center my-4 d-grid">
+        <div className="d-flex justify-content-center my-5 d-grid">
           <NavLink
             className="btn text-center back-home"
             to="/"
