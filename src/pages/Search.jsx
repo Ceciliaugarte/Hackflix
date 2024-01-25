@@ -38,56 +38,67 @@ function Search() {
 
   return (
     filteredMovies && (
-      <div className="container">
-        <div className="row justify-content-center mb-2">
-          <div className="col-8 my-4 d-grid">
-            <form>
-              <div className="mb-3 text-center">
-                <label
-                  htmlFor="searchMovie"
-                  className="form-label fw-bold fs-3 py-5 general-text"
-                >
-                  Search Movie
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="searchMovie"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter a movie title..."
-                  value={inputTitle.value}
-                  onChange={inputTitle.onChange}
-                />
-              </div>
-            </form>
-          </div>
-        </div>
-        <div className="row m-1 movie">
-          {filteredMovies.length === 0 && inputTitle.value !== "" ? (
-            <div className="d-flex justify-content-center">
-              <div className="col-8 alert alert-info text-center" role="alert">
-                No se una película con ese titulo
-              </div>
+      <div>
+        <header
+          className="headerImg"
+          style={{
+            backgroundImage: `url("https://naanmedia.in/wp-content/uploads/2022/10/3658600.jpg")`,
+          }}
+        ></header>
+        <div className="container">
+          <div className="row justify-content-center mb-2">
+            <div className="col-8 my-4 d-grid">
+              <form>
+                <div className="mb-3 text-center">
+                  <label
+                    htmlFor="searchMovie"
+                    className="form-label fw-bold fs-3 py-5 general-text"
+                  >
+                    Search Movie
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="searchMovie"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter a movie title..."
+                    value={inputTitle.value}
+                    onChange={inputTitle.onChange}
+                  />
+                </div>
+              </form>
             </div>
-          ) : (
-            filteredMovies.map((filteredMovie, index) => (
-              <Movie
-                movie={filteredMovie}
-                key={`${filteredMovie.id}_${index}`}
-              />
-            ))
-          )}
-        </div>
-        <div className="d-flex justify-content-center my-4 d-grid">
-          <NavLink
-            className="btn text-center back-home"
-            to="/"
-            onClick={() => scrollToTop()}
-          >
-            {" "}
-            <i className="bi bi-arrow-left me-2"></i>
-            Back home
-          </NavLink>
+          </div>
+          <div className="row m-1 movie">
+            {filteredMovies.length === 0 && inputTitle.value !== "" ? (
+              <div className="d-flex justify-content-center">
+                <div
+                  className="col-8 alert alert-info text-center"
+                  role="alert"
+                >
+                  No se una película con ese titulo
+                </div>
+              </div>
+            ) : (
+              filteredMovies.map((filteredMovie, index) => (
+                <Movie
+                  movie={filteredMovie}
+                  key={`${filteredMovie.id}_${index}`}
+                />
+              ))
+            )}
+          </div>
+          <div className="d-flex justify-content-center my-4 d-grid">
+            <NavLink
+              className="btn text-center back-home"
+              to="/"
+              onClick={() => scrollToTop()}
+            >
+              {" "}
+              <i className="bi bi-arrow-left me-2"></i>
+              Back home
+            </NavLink>
+          </div>
         </div>
       </div>
     )
