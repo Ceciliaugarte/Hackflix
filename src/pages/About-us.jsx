@@ -1,10 +1,14 @@
 import { NavLink } from "react-router-dom";
 
 function AboutUs() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="container my-5">
       <div className="row mx-5 my-5 g-4">
-        <div className="col border rounded p-5">
+        <div className="colsp-5">
           <h1 className="text-center mb-4 about-us general-text fw-bold ">
             About us:
           </h1>
@@ -36,7 +40,11 @@ function AboutUs() {
         </div>
       </div>
       <div className="d-flex justify-content-center my-4 d-grid">
-        <NavLink className="btn text-center back-home" to="/">
+        <NavLink
+          className="btn text-center back-home"
+          to="/"
+          onClick={() => scrollToTop()}
+        >
           <i className="bi bi-arrow-left me-2"></i>
           Back home
         </NavLink>

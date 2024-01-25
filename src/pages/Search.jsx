@@ -9,6 +9,10 @@ function Search() {
   const [filteredMovies, setFilteredMovies] = useState([]);
   const inputTitle = useInput("");
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   useEffect(() => {
     const getFilteredMovies = async () => {
       try {
@@ -75,7 +79,11 @@ function Search() {
           )}
         </div>
         <div className="d-flex justify-content-center my-4 d-grid">
-          <NavLink className="btn text-center back-home" to="/">
+          <NavLink
+            className="btn text-center back-home"
+            to="/"
+            onClick={() => scrollToTop()}
+          >
             {" "}
             <i className="bi bi-arrow-left me-2"></i>
             Back home

@@ -55,36 +55,44 @@ function Movies() {
   }, [page]);
 
   return (
-    <div className="container">
-      <div>
-        <p className="text-center mt-3 pt-3 fs-2 fw-semibold mb-2 text-white">
-          Filtrar por Rating
-        </p>
-        <div className="d-flex justify-content-center">
-          <ReactStars
-            count={5}
-            onChange={(newValue) => setRating(newValue)}
-            size={36}
-            activeColor="#ffd700"
-          />
+    <div>
+      <header
+        className="headerImg"
+        style={{
+          backgroundImage: `url("https://naanmedia.in/wp-content/uploads/2022/10/3658600.jpg")`,
+        }}
+      ></header>
+      <div className="container">
+        <div>
+          <p className="text-center mt-3 pt-3 fs-2 fw-semibold mb-2 text-white">
+            Filtrar por Rating
+          </p>
+          <div className="d-flex justify-content-center">
+            <ReactStars
+              count={5}
+              onChange={(newValue) => setRating(newValue)}
+              size={36}
+              activeColor="#ffd700"
+            />
+          </div>
         </div>
-      </div>
 
-      {movies ? (
-        <div className="row m-1 movie">
-          {movies.map((movie, index) => (
-            <Movie movie={movie} key={`${movie.id}_${index}`} />
-          ))}
-        </div>
-      ) : (
-        <div className="alert alert-info text-center" role="alert">
-          No hay películas para mostrar
-        </div>
-      )}
+        {movies ? (
+          <div className="row m-1 movie">
+            {movies.map((movie, index) => (
+              <Movie movie={movie} key={`${movie.id}_${index}`} />
+            ))}
+          </div>
+        ) : (
+          <div className="alert alert-info text-center" role="alert">
+            No hay películas para mostrar
+          </div>
+        )}
 
-      <div className="row justify-content-center">
-        <div className="col-3 pages">
-          <Pages page={page} setPage={setPage} totalPages={totalPages} />
+        <div className="row justify-content-center">
+          <div className="col-3 pages">
+            <Pages page={page} setPage={setPage} totalPages={totalPages} />
+          </div>
         </div>
       </div>
     </div>

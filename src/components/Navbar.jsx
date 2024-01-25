@@ -18,7 +18,7 @@ function Navbar() {
     <div className="navbar-container">
       <BootstrapNavbar
         expand="lg"
-        className="nav-box py-2 px-5 navbar-light"
+        className="nav-box py-2 px-5 navbar-dark"
         expanded={expanded}
       >
         <Container>
@@ -31,7 +31,7 @@ function Navbar() {
 
           <BootstrapNavbar.Toggle
             aria-controls="navbarNav"
-            className="bg-light"
+            className="bg-dark"
             onClick={handleNavbarToggle}
           />
 
@@ -39,7 +39,7 @@ function Navbar() {
             <Nav className="ms-auto mt-3 ">
               <Nav.Item className="mb-2 mt-2">
                 <NavLink
-                  className="search-item rounded-pill border border-light-subtle text-bold text-light px-3 align-middle"
+                  className="search-item rounded-pill border border-light-subtle text-bold text-light px-lg-3 py-lg-2 align-middle"
                   to="/search"
                   onClick={closeNavbar}
                 >
