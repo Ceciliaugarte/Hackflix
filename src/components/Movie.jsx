@@ -23,7 +23,7 @@ function Movie({ movie }) {
           />
         ) : (
           <img
-            src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg"
+            src="https://dummyimage.com/286x429/707070/fff&text=404-Image+Not+Found"
             alt="Movie-poster"
           />
         )}

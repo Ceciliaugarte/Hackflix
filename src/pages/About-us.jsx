@@ -7,13 +7,13 @@ function AboutUs() {
 
   return (
     <div>
-      <header
+      {/* <header
         className="headerImg"
         style={{
           backgroundImage: `url("https://naanmedia.in/wp-content/uploads/2022/10/3658600.jpg")`,
         }}
-      ></header>
-      <div className="container my-5 about-us">
+      ></header> */}
+      <div className="container my-5 pt-5 about-us">
         <div className="row justify-content-center mb-2">
           <div className="col-12 col-lg-10">
             <h1 className="text-center mb-4 general-text fw-bold ">

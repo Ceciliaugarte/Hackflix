@@ -39,12 +39,12 @@ function Search() {
   return (
     filteredMovies && (
       <div>
-        {/*   <header
+        <header
           className="headerImg"
           style={{
             backgroundImage: `url("https://naanmedia.in/wp-content/uploads/2022/10/3658600.jpg")`,
           }}
-        ></header> */}
+        ></header>
         <div className="container my-4 search-box">
           <div className="row justify-content-center mb-2">
             <div className="col-8 d-grid">
@@ -52,7 +52,7 @@ function Search() {
                 <div className="mb-3 text-center">
                   <label
                     htmlFor="searchMovie"
-                    className="form-label fw-bold fs-1 general-text"
+                    className="form-label fw-bold fs-1 general-text mb-5"
                   >
                     SEARCH MOVIE:
                   </label>
@@ -73,10 +73,10 @@ function Search() {
             {filteredMovies.length === 0 && inputTitle.value !== "" ? (
               <div className="d-flex justify-content-center">
                 <div
-                  className="col-8 alert alert-info text-center"
+                  className="col-8 alert alert-danger text-center my-4"
                   role="alert"
                 >
-                  No se una película con ese titulo
+                  There are no matches with that title
                 </div>
               </div>
             ) : (

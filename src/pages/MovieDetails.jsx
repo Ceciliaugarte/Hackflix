@@ -84,7 +84,7 @@ function MovieDetails(props) {
                   />
                 ) : (
                   <img
-                    src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg"
+                    src="https://dummyimage.com/286x429/707070/fff&text=404-Image+Not+Found"
                     alt="Movie-poster"
                     className="movie-img"
                   />
@@ -113,13 +113,17 @@ function MovieDetails(props) {
                   {movie.vote_average.toFixed(1)} / 10
                 </p>
                 <hr />
-                <small className="text-secondary">
-                  Produced by{" "}
-                  <strong>
-                    {movie.production_companies[0].name} &middot;{" "}
-                    {movie.production_countries[0].name}
-                  </strong>
-                </small>
+                {movie.production_companies.length > 0 &&
+                movie.production_countries.length > 0 ? (
+                  <small className="text-secondary">
+                    Produced by{" "}
+                    <strong>{movie.production_companies[0].name}</strong>
+                    <strong>
+                      {" "}
+                      &middot; {movie.production_countries[0].name}
+                    </strong>
+                  </small>
+                ) : null}
               </div>
             </div>
           </div>
