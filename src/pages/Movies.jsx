@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Movie from "../components/Movie";
 import Pages from "../components/Pages";
+import CarouselMovies from "../components/CarouselMovies";
 
 let totalPages;
 function Movies() {
@@ -56,12 +57,9 @@ function Movies() {
 
   return (
     <div>
-      <header
-        className="headerImg"
-        style={{
-          backgroundImage: `url("https://naanmedia.in/wp-content/uploads/2022/10/3658600.jpg")`,
-        }}
-      ></header>
+      <header className="headerImg">
+        <CarouselMovies />
+      </header>
       <div className="container">
         <div>
           <p className="text-center mt-3 pt-3 fs-2 fw-semibold mb-2 text-white">

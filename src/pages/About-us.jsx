@@ -13,11 +13,11 @@ function AboutUs() {
           backgroundImage: `url("https://naanmedia.in/wp-content/uploads/2022/10/3658600.jpg")`,
         }}
       ></header>
-      <div className="container my-5">
-        <div className="row mx-5 my-5 g-4">
-          <div className="colsp-5">
-            <h1 className="text-center mb-4 about-us general-text fw-bold ">
-              About us:
+      <div className="container my-5 about-us">
+        <div className="row justify-content-center mb-2">
+          <div className="col-12 col-lg-10">
+            <h1 className="text-center mb-4 general-text fw-bold ">
+              ABOUT US:
             </h1>
             <p className="general-text fs-5">
               Step into the world of Hackflix, where movie magic meets the

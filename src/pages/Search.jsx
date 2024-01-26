@@ -39,22 +39,22 @@ function Search() {
   return (
     filteredMovies && (
       <div>
-        <header
+        {/*   <header
           className="headerImg"
           style={{
             backgroundImage: `url("https://naanmedia.in/wp-content/uploads/2022/10/3658600.jpg")`,
           }}
-        ></header>
-        <div className="container">
+        ></header> */}
+        <div className="container my-4 search-box">
           <div className="row justify-content-center mb-2">
-            <div className="col-8 my-4 d-grid">
+            <div className="col-8 d-grid">
               <form>
                 <div className="mb-3 text-center">
                   <label
                     htmlFor="searchMovie"
-                    className="form-label fw-bold fs-3 py-5 general-text"
+                    className="form-label fw-bold fs-1 general-text"
                   >
-                    Search Movie
+                    SEARCH MOVIE:
                   </label>
                   <input
                     type="text"

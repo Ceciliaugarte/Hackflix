@@ -7,6 +7,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 
 .hackflix {
@@ -15,10 +16,6 @@
     sans-serif;
   color: rgb(170, 0, 0);
   font-weight: 900;
-}
-
-nav {
-  z-index: 1;
 }
 
 .nav-link {
@@ -30,7 +27,7 @@ nav {
 .nav-link:hover {
   color: rgb(170, 0, 0) !important;
   text-decoration: none !important;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .search-item {
@@ -60,9 +57,13 @@ nav {
 
 .headerImg {
   height: 90vh;
+  width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  filter: sepia(40%);
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
 }
 
 .movie img {
@@ -111,7 +112,11 @@ nav {
   color: black;
 }
 
-.about-us .contact {
+.about-us,
+.contact,
+.search-box {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 

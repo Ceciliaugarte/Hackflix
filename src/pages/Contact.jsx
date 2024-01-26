@@ -7,16 +7,8 @@ function Contact() {
 
   return (
     <div>
-      <header
-        className="headerImg"
-        style={{
-          backgroundImage: `url("https://naanmedia.in/wp-content/uploads/2022/10/3658600.jpg")`,
-        }}
-      ></header>
-      <div className="container my-5">
-        <h1 className="text-center general-text mb-4 contact fw-bold ">
-          Contact:
-        </h1>
+      <div className="container my-5 pt-5 contact">
+        <h1 className="text-center general-text mb-4 fw-bold ">CONTACT:</h1>
         <div className="row me-1">
           <div className="col-12 col-lg-4 contact-img-box">
             <img
@@ -30,13 +22,20 @@ function Contact() {
               This proyect was created by <strong>Cecilia Ugartemendia </strong>
             </p>
             <p className="general-text fs-5">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus
-              iure vitae harum veritatis? Distinctio adipisci, sequi mollitia
-              minima voluptate ipsa? Soluta ut ad ea nemo delectus dicta
-              perspiciatis saepe nihil. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Quasi, soluta maxime veritatis architecto
-              voluptates ex maiores consequuntur quidem asperiores ab blanditiis
-              nihil, deserunt corporis sunt provident dolores totam non eos?
+              I am a full stack developer who completed a 3-month, 600-hour
+              bootcamp in 2023. As a junior participant, I underwent intensive
+              training in both front-end and back-end development. Through
+              hands-on projects, collaborative coding challenges, and
+              mentorship, I acquired proficiency in various technologies and
+              frameworks.
+            </p>
+            <p className="general-text fs-5">
+              During the bootcamp, I worked on this project utilizing
+              <strong> React</strong>, one of several undertaken to enhance my
+              skills in web development. This immersive experience has equipped
+              me to actively contribute to web development projects and
+              continues to fuel my passion for learning and growth in this
+              field.
             </p>
             <div>
               <a
