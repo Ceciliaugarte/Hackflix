@@ -2,12 +2,15 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import YouTube from "react-youtube";
 
 function MovieDetails(props) {
   const params = useParams();
 
   const [movie, setMovie] = useState(null);
   const [isError, setIsError] = useState(null);
+  const [trailer, setTrailer] = useState(null);
+  const [playing, setPlaying] = useState(false);
 
   const convertRunTime = (min) => {
     const hours = Math.floor(min / 60);
@@ -30,8 +33,19 @@ function MovieDetails(props) {
           url: `https://api.themoviedb.org/3/movie/${params.id}`,
           params: {
             api_key: "47c47491160da0f21768c993b889be38",
+            append_to_response: "videos",
           },
         });
+        if (
+          response.data.videos &&
+          response.data.videos.results &&
+          response.data.videos.results.length > 0
+        ) {
+          const trailer = response.data.videos.results.find(
+            (vid) => vid.name === "Official Trailer"
+          );
+          setTrailer(trailer || response.data.videos.results[0]);
+        }
         setMovie(response.data);
       } catch (err) {
         setIsError({ code: err.code });
@@ -89,6 +103,53 @@ function MovieDetails(props) {
                     className="movie-img"
                   />
                 )}
+                {trailer ? (
+                  playing ? (
+                    <div className="container">
+                      <div className="row">
+                        <div className="col-12">
+                          <YouTube
+                            videoId={trailer.key}
+                            className="reproductor container"
+                            containerClassName="youtube-container amru"
+                            opts={{
+                              width: "100%",
+                              height: "100%",
+                              playerVars: {
+                                autoplay: 1,
+                                controls: 0,
+                                cc_load_policy: 0,
+                                fs: 0,
+                                iv_load_policy: 0,
+                                modestbranding: 0,
+                                rel: 0,
+                                showinfo: 0,
+                              },
+                            }}
+                          />
+                          <button
+                            className="close btn btn-dark mb-3 me-5"
+                            onClick={() => setPlaying(false)}
+                          >
+                            Close Trailer
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <button
+                      className="btn trailer-btn rounded fs-5 mt-2  ms-4"
+                      onClick={() => setPlaying(true)}
+                      type="button"
+                    >
+                      Play Trailer
+                    </button>
+                  )
+                ) : (
+                  <h6 className="text-white mt-3 ms-4 no-available">
+                    No trailer available
+                  </h6>
+                )}
               </div>
               <div className="col-12 col-lg-8 mb-4 ps-5  info-box">
                 <h1 className="general-text display-3">{movie.title}</h1>
@@ -105,7 +166,9 @@ function MovieDetails(props) {
                 </p>
                 <p className="mb-4 general-text fs-4">
                   This movie has been already watched by{" "}
-                  <strong>{movie.popularity} people!</strong>
+                  <strong className="text-popularity">
+                    {movie.popularity} people!
+                  </strong>
                   {console.log(movie)}
                 </p>
                 <p className="mt-3 general-text fs-4 fw-semibold">Rating: </p>

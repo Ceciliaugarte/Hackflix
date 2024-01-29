@@ -93,12 +93,39 @@
   margin: 50px 25px;
 }
 
+.trailer-btn {
+  color: whitesmoke;
+  background-color: rgb(170, 0, 0);
+  font-weight: 600;
+}
+
+.trailer-btn:hover {
+  color: rgb(170, 0, 0);
+  border: solid rgb(170, 0, 0) 3px;
+  font-weight: 600;
+}
+
+.reproductor {
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.close {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
 .img-box {
   justify-content: center;
 }
 
 .info-box {
   margin: 30px 0;
+}
+
+.text-popularity {
+  color: rgb(170, 0, 0);
 }
 
 .back-home {
@@ -237,6 +264,12 @@ li:hover {
   .contact-img-box {
     display: flex;
     justify-content: center;
+  }
+  .no-available {
+    text-align: center;
+  }
+  .about-us-link {
+    margin-top: 4%;
   }
 }
 

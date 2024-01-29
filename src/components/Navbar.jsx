@@ -59,7 +59,7 @@ function Navbar() {
 
               <Nav.Item className="nav-link ps-2 mb-2">
                 <NavLink
-                  className="nav-link py-0"
+                  className="nav-link py-0 about-us-link"
                   to="/about-us"
                   onClick={closeNavbar}
                 >
