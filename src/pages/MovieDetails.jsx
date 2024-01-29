@@ -48,14 +48,14 @@ function MovieDetails(props) {
     );
   } else {
     return !movie ? (
-      <div>
+      <div className="justify-content-center align-items-center">
         <header
           className="headerImg"
           style={{
-            backgroundImage: `url("https://naanmedia.in/wp-content/uploads/2022/10/3658600.jpg")`,
+            backgroundImage: `url("https://dummyimage.com/1800x728/262626/262626&text=Image+not+Found")`,
           }}
         ></header>
-        <div className="justify-content-center">
+        <div>
           <div
             className="spinner-border text-secondary justify-content-center"
             role="status"
