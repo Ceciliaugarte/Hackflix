@@ -18,7 +18,7 @@ function CarouselMovies() {
         <div
           className="headerImg"
           style={{
-            backgroundImage: `url("https://images.hdqwalls.com/wallpapers/movie-wall-e-ad.jpg")`,
+            backgroundImage: `url("https://images.hdqwalls.com/wallpapers/wall-e-irresistible-cuteness-qz.jpg")`,
           }}
         ></div>
         <Carousel.Caption>
@@ -29,7 +29,7 @@ function CarouselMovies() {
         <div
           className="headerImg"
           style={{
-            backgroundImage: `url("https://wallpaperaccess.com/full/1227081.jpg")`,
+            backgroundImage: `url("https://wallpaperaccess.com/full/6896486.jpg")`,
           }}
         ></div>
         <Carousel.Caption>
