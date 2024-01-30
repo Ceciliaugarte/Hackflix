@@ -17,7 +17,7 @@ function Contact() {
               alt="CeciliaImg"
             />
           </div>
-          <div className="col-12 col-lg-8 mt-lg-4">
+          <div className="col-12 col-lg-8 mt-lg-4 justify-content-center">
             <p className="general-text fs-5">
               This proyect was created by <strong>Cecilia Ugartemendia </strong>
             </p>
