@@ -105,40 +105,38 @@ function MovieDetails(props) {
                 )}
                 {trailer ? (
                   playing ? (
-                    <div className="container">
-                      <div className="row">
-                        <div className="col-12">
-                          <YouTube
-                            videoId={trailer.key}
-                            className="reproductor container"
-                            containerClassName="youtube-container amru"
-                            opts={{
-                              width: "100%",
-                              height: "100%",
-                              playerVars: {
-                                autoplay: 1,
-                                controls: 0,
-                                cc_load_policy: 0,
-                                fs: 0,
-                                iv_load_policy: 0,
-                                modestbranding: 0,
-                                rel: 0,
-                                showinfo: 0,
-                              },
-                            }}
-                          />
-                          <button
-                            className="close btn btn-dark mb-3 me-5"
-                            onClick={() => setPlaying(false)}
-                          >
-                            Close Trailer
-                          </button>
-                        </div>
+                    <div>
+                      <div className="video-container">
+                        <YouTube
+                          videoId={trailer.key}
+                          className="reproductor"
+                          containerClassName="youtube-container"
+                          opts={{
+                            width: "100%",
+                            height: "100%",
+                            playerVars: {
+                              autoplay: 1,
+                              controls: 0,
+                              cc_load_policy: 0,
+                              fs: 0,
+                              iv_load_policy: 0,
+                              modestbranding: 0,
+                              rel: 0,
+                              showinfo: 0,
+                            },
+                          }}
+                        />
+                        <button
+                          className="close btn btn-dark mb-3 me-5"
+                          onClick={() => setPlaying(false)}
+                        >
+                          Close Trailer
+                        </button>
                       </div>
                     </div>
                   ) : (
                     <button
-                      className="btn trailer-btn rounded fs-5 mt-2  ms-4"
+                      className="btn trailer-btn rounded fs-5 ms-4"
                       onClick={() => setPlaying(true)}
                       type="button"
                     >
