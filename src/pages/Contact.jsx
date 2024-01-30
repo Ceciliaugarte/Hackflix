@@ -38,8 +38,8 @@ function Contact() {
               field.
             </p>
             <div>
-              <p className="general-text fs-5">
-                Contact me on social networks!
+              <p className="general-text fs-5 mt-2">
+                Contact me on social networks:
               </p>
               <a
                 href="https://www.linkedin.com/in/cecilia-ugartemendia/"
