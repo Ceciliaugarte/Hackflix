@@ -48,7 +48,7 @@ function Contact() {
                 <i className="bi bi-linkedin display-4 icon"></i>
               </a>
               <a href="https://github.com/Ceciliaugarte" target="_blank">
-                <i className="bi bi-github display-4 ms-4 icon"></i>
+                <i className="bi bi-github display-4 ms-3 icon"></i>
               </a>
             </div>
           </div>
