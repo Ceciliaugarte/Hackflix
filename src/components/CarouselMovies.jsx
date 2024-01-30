@@ -18,7 +18,7 @@ function CarouselMovies() {
         <div
           className="headerImg"
           style={{
-            backgroundImage: `url("https://images.hdqwalls.com/wallpapers/wall-e-irresistible-cuteness-qz.jpg")`,
+            backgroundImage: `url("https://images.hdqwalls.com/wallpapers/movie-wall-e-ad.jpg")`,
           }}
         ></div>
         <Carousel.Caption>
